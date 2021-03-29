@@ -1,5 +1,5 @@
 # GenCyberTacoma-Website-2021
-(last updated: March 29)
+(last updated: March 29. Respository has been archived)
 Repository containing website made as part of GenCyber Tacoma internship. Last updated March 2021, when I successfully completed the internship.
 
 Purpose of the website is to showcase and advertise GenCyber Tacoma, a free, one-week summer camp aimed to promote cybersecurity education among middle
