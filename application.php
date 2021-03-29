@@ -9,78 +9,10 @@ echo("<pre>"); */
 
 
     
-    function sanitizeInput($data) {
-        $data = filter_var($data,FILTER_SANITIZE_STRING);
-        $data = filter_var($data,FILTER_SANITIZE_SPECIAL_CHARS);
-        return $data;
-    } //function to strip special chars and scripts from executing
+    //note: PHP script has been removed since website is still active. Once 2021 camp has concluded, script will be added back.
    
 
-    if(!empty($_POST['firstname']) &&
-      !empty($_POST['lastname']) &&
-      !empty($_POST['age']) &&
-      !empty($_POST['firstname'])) { //checks to see if all fields are filled out before submitting
-        
-        //form data being sent
-        $firstName = sanitizeInput($_POST['firstname']);
-            $lastName = sanitizeInput($_POST['lastname']);
-            $Age = $_POST['age'];
-            $Email = sanitizeInput($_POST['email']);
-            
-            $address = sanitizeInput($_POST['address']);
-            $zipCode = sanitizeInput($_POST['zipcode']);
-            $primName = sanitizeInput($_POST['primaryContactName']);
-            $primNumber = sanitizeInput($_POST['primaryContactNumber']);
-            $primWorkHome = sanitizeInput($_POST['pContactWorkorHome']);
-            $secName = sanitizeInput($_POST['secondaryContactName']);
-            $secNumber = sanitizeInput($_POST['secondaryContactNumber']);
-            $secWorkHome = sanitizeInput($_POST['sContactWorkorHome']);
-            $campOneorTwo = sanitizeInput($_POST['campOneorTwo']);
-        
-            
-      
-            
-
-           
-            $to = "gencybertacoma@uw.edu"; //test email I created to see if information was being sent there. taccgcuwt@gmail.com gencybertacoma@uw.edu"
-            $messageSubject = "GenCyber Applicant";
-            $body = "Someone New Has Applied for GenCyber Tacoma!"."\r\n"; 
-
-            $body .= "First Name: ".$firstName."\r\n";
-            $body .= "Last Name: ".$lastName."\r\n";
-            $body .= "Age of Child: ".$Age."\r\n";
-            $body .= "Contact Email: ".$Email."\r\n";
-        
-            $body .= "Address: ".$address."\r\n";
-            $body .= "5-Digit Zip Code: ".$zipCode."\r\n";
-            $body .= "Primary Contact Name: ".$primName."\r\n";
-            $body .= "Primary Contact Number: ".$primNumber."\r\n";
-            $body .= "Primary Contact Work or Cell?: ".$primWorkHome."\r\n";
-            $body .= "Secondary Contact Name: ".$secName."\r\n";
-            $body .= "Secondary Contact Number: ".$secNumber."\r\n";
-            $body .= "Secondary Contact Work or Cell?: ".$secWorkHome."\r\n";
-            $body .= "Camp 1 or Camp 2: ".$campOneorTwo."\r\n";
-
-            mail($to,$messageSubject,$body); //sends message
-            
-            
-        
-        
-        
-            
-        
-        
-        /*if (mail($to, $messageSubject, $body)) {      
-                echo "Email successfully sent to $to...";
-            } else {
-                echo "Email sending failed...$to";
-            } */
-            
-            
-            //test code I used to see if mail request is succesful.
-        echo '<script>alert("Application has Sucessfully Been Submitted!")</script>'; 
-        
-    } 
+    
 
 ?>
 
